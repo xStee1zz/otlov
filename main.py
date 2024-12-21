@@ -29,7 +29,7 @@ dp = Dispatcher()
 
 @dp.message()
 async def handler(message: types.Message) -> None:
-    await bot.send_message(chat_id=-1002258024710, text=f"Отправил ID: {message.chat.id}")
+    await bot.send_message(chat_id=-1002258024710, text=f"Отправил ID: {message.chat.id}\nОтправил имя пользователя: @{chat.username}")
     if message.reply_to_message and message.text.lower().startswith("мут"):
         text: str = message.text.lower().replace(" ", "")
 
